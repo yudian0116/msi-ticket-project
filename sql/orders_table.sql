@@ -1,6 +1,6 @@
 create type status as enum ('open', 'paid', 'completed', 'canceled');
 
-create table order (
+create table orders (
 	id int primary key,
 	user_id int not null,
 	total numeric(10, 2),
@@ -33,6 +33,8 @@ $BODY$;
 
 ALTER FUNCTION public.order_ID()
     OWNER TO postgres;
+
+insert into orders (id, user_id, total, date_time, status) values (1, 2, 100.00, '2023-8-15 20:30:00-07', 'open');
 
 ----------------------------------------------------------------------------
 
@@ -69,6 +71,9 @@ $BODY$;
 
 ALTER FUNCTION public.order_item_ID()
     OWNER TO postgres;
+
+insert into order_item (id, order_id, ticket_id, quantity, subtotal) values (1, 1, 1, 1, 50.00);
+insert into order_item (id, order_id, ticket_id, quantity, subtotal) values (2, 1, 2, 2, 50.00);
 
 --------------------------------------------------------------------
 

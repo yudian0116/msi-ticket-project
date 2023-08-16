@@ -1,4 +1,4 @@
-create table venue (
+ create table venue (
 	id int primary key,
 	name varchar(100) not null,
 	address varchar(200) not null,
