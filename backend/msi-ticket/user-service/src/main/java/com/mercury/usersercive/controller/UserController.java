@@ -1,7 +1,7 @@
 package com.mercury.usersercive.controller;
 
 import com.mercury.usersercive.bean.User;
-import com.mercury.usersercive.http.Response;
+import http.Response;
 import com.mercury.usersercive.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

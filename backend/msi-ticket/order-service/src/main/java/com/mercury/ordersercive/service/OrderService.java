@@ -5,13 +5,17 @@ import com.mercury.ordersercive.bean.OrderItem;
 import com.mercury.ordersercive.dao.EditOrderRequestDao;
 import com.mercury.ordersercive.dao.OrderDao;
 import com.mercury.ordersercive.dao.OrderItemDao;
-import com.mercury.ordersercive.http.Response;
+import dto.TicketResponse;
+import http.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.reactive.function.client.WebClient;
 
+import java.time.ZonedDateTime;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -26,6 +30,9 @@ public class OrderService {
     @Autowired
     private EditOrderRequestDao editOrderRequestDao;
 
+    @Autowired
+    private WebClient.Builder webClientBuilder;
+
     public Order getOrderById(Integer id) {
         return orderDao.findById(id).get();
     }
@@ -34,15 +41,35 @@ public class OrderService {
     public Response save(Order order) {
         try {
             List<OrderItem> purchases = order.getPurchases();
-            purchases.forEach((orderItem) -> {
-                orderItem.setTicket_id(orderItem.getTicket_id());
+            List<Integer> ticketIds = purchases.stream().map(OrderItem::getTicket_id).toList();
 
-                orderItem.setOrder(order);
-            });
+            TicketResponse[] ticketResponseArray = webClientBuilder.build().get()
+                    .uri("http://event-service/tickets/list",
+                            uriBuilder -> uriBuilder.queryParam("ticketId", ticketIds).build())
+                    .retrieve()
+                    .bodyToMono(TicketResponse[].class)
+                    .block();
 
-            //orderHistoryDao.save(order);
-            orderDao.save(order);
+            boolean allTicketsAvail = Arrays.stream(ticketResponseArray).allMatch(TicketResponse::isAvailable);
 
+            // TODO: map subtotal to each orderItem
+
+            if(allTicketsAvail) {
+                purchases.forEach((orderItem) -> {
+                    orderItem.setTicket_id(orderItem.getTicket_id());
+                    orderItem.setQuantity(orderItem.getQuantity());
+                    orderItem.setOrder(order);
+                });
+                orderDao.save(order);
+            } else {
+                throw new IllegalArgumentException("Ticket not available!");
+            }
+
+            double total = Arrays.stream(ticketResponseArray).mapToDouble(TicketResponse::getPrice).sum();
+
+            order.setTotal(total);
+            order.setDate_time(ZonedDateTime.now());
+            order.setStatus("open");
             return new Response(true);
         } catch (Exception e) {
             return new Response(false);

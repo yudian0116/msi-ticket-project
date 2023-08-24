@@ -18,7 +18,7 @@ public class OrderItem {
     @Getter
     private int id;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     private Order order;
 
     @Column
@@ -31,7 +31,7 @@ public class OrderItem {
 
     @Column
     @Getter
-    private float subtotal;
+    private double subtotal;
 
     @JsonIgnore
     public Order getOrder() {

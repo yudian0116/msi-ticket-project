@@ -7,4 +7,7 @@ import java.util.List;
 
 public interface TicketDao extends JpaRepository<Ticket, Integer> {
     public List<Ticket> findByEventId(int event_id);
+
+    public List<Ticket> findTicketByIdIn(List<Integer> ticket_id);
+
 }

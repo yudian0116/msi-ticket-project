@@ -151,3 +151,4 @@ ALTER FUNCTION public.ticket_ID()
 
 insert into ticket (id, event_id, price, stock, type) values (1, 1, 50.00, 10, 'VIP');
 insert into ticket (id, event_id, price, stock, type) values (2, 1, 25.00, 30, 'Common');
+insert into ticket (id, event_id, price, stock, type) values (3, 1, 0.00, 0, 'Test');

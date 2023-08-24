@@ -5,104 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5fecca4a-1e3f-4f6d-a080-2b13a867925b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../cart-service/src/main/java/com/mercury/cartservice/bean/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cart-service/src/main/java/com/mercury/cartservice/bean/CartItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cart-service/src/main/java/com/mercury/cartservice/controller/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cart-service/src/main/java/com/mercury/cartservice/dao/CartDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cart-service/src/main/java/com/mercury/cartservice/dao/CartItemDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cart-service/src/main/java/com/mercury/cartservice/http/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cart-service/src/main/java/com/mercury/cartservice/service/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/bean/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/bean/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/bean/Ticket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/bean/Venue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/controller/EventController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/controller/TicketController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/controller/VenueController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/dao/CategoryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/dao/EventDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/dao/TicketDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/dao/VenueDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/http/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/service/EventService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/service/TicketService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/service/VenueService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/mercury/cartservice/CartServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/mercury/cartservice/bean/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/mercury/cartservice/bean/CartItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/mercury/cartservice/controller/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/mercury/cartservice/dao/CartDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/mercury/cartservice/dao/CartItemDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/mercury/cartservice/http/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/mercury/cartservice/service/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart-service/src/test/java/com/mercury/cartservice/CartServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/EventSerciveApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/bean/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/bean/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/bean/Ticket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/bean/Venue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/controller/EventController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/controller/TicketController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/controller/VenueController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/dao/CategoryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/dao/EventDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/dao/TicketDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/dao/VenueDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/http/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/service/EventService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/service/TicketService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/service/VenueService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event-service/src/test/java/com/mercury/eventsercive/EventSerciveApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/OrderSerciveApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/bean/EditOrderRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/bean/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/bean/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/dao/EditOrderRequestDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/dao/OrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/dao/OrderItemDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/http/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mercury/ordersercive/OrderSerciveApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/UserSerciveApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/bean/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/bean/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/bean/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/http/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/test/java/com/mercury/usersercive/UserSerciveApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shread/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shread/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shread/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shread/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shread/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cart-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cart-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cart-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../cart-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../event-sercive/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../event-sercive/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../event-sercive/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../event-sercive/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/bean/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/bean/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/bean/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/bean/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-sercive/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../order-sercive/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user-sercive/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../user-sercive/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/83f7ee1b-bedc-426e-a7a5-7795c667b3c5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/83f7ee1b-bedc-426e-a7a5-7795c667b3c5/storage_v2/_src_/database/orders.5WLfww.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/83f7ee1b-bedc-426e-a7a5-7795c667b3c5/storage_v2/_src_/database/orders.5WLfww/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/83f7ee1b-bedc-426e-a7a5-7795c667b3c5/storage_v2/_src_/database/orders.5WLfww/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/83f7ee1b-bedc-426e-a7a5-7795c667b3c5/storage_v2/_src_/database/orders.5WLfww/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/83f7ee1b-bedc-426e-a7a5-7795c667b3c5/storage_v2/_src_/database/orders.5WLfww/schema/public.abK9xQ.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/src/main/java/com/mercury/discoveryserver/DiscoveryServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/config/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shared/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shared/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shared/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shared/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shared/src/main/java/dto/TicketResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shared/src/main/java/http/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-service/src/main/java/com/mercury/cartservice/http/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/event-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/controller/TicketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/dao/CategoryDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/dao/EventDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/dao/EventDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/dao/TicketDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/dao/TicketDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/http/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/service/EventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/service/EventService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/service/TicketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/event-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/http/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/http/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sql/events_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../sql/events_table.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,9 +65,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2UMPr3VmJrbfJxPV8Bk2U3wqEkf" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -132,22 +78,39 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "jbr-17",
-    "last_opened_file_path": "/Users/yudianli/Documents/GitHub/msi-ticket-project/backend/msi-ticket/user-service",
+    "last_opened_file_path": "/Users/yudianli/Documents/GitHub/msi-ticket-project/backend/msi-ticket",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "spring.configuration.checksum": "a0578c452681aa7faf4327f37d9c48b8",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/user-service" />
       <recent name="$PROJECT_DIR$/order-service" />
       <recent name="$PROJECT_DIR$/event-service" />
@@ -161,7 +124,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CartServiceApplication">
+  <component name="RunManager" selected="Spring Boot.EventSerciveApplication">
     <configuration name="CartServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="cart-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.mercury.cartservice.CartServiceApplication" />
@@ -169,7 +132,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EventSerciveApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="discovery-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mercury.discoveryserver.DiscoveryServerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mercury.discoveryserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EventSerciveApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" nameIsGenerated="true">
       <module name="event-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.mercury.eventsercive.EventSerciveApplication" />
       <method v="2">
@@ -190,6 +166,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.CartServiceApplication" />
+      <item itemvalue="Spring Boot.EventSerciveApplication" />
+      <item itemvalue="Spring Boot.OrderSerciveApplication" />
+      <item itemvalue="Spring Boot.UserSerciveApplication" />
+      <item itemvalue="Spring Boot.DiscoveryServerApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.DiscoveryServerApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -200,6 +188,7 @@
       <option name="presentableId" value="Default" />
       <updated>1692746672531</updated>
       <workItem from="1692746673822" duration="2781000" />
+      <workItem from="1692802344834" duration="8894000" />
     </task>
     <servers />
   </component>

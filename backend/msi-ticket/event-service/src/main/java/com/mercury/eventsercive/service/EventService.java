@@ -1,8 +1,6 @@
 package com.mercury.eventsercive.service;
 
-import com.mercury.eventsercive.bean.Category;
 import com.mercury.eventsercive.bean.Event;
-import com.mercury.eventsercive.dao.CategoryDao;
 import com.mercury.eventsercive.dao.EventDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,9 +14,6 @@ public class EventService {
     @Autowired
     private EventDao eventDao;
 
-    @Autowired
-    private CategoryDao categoryDao;
-
     public void save(Event event) {eventDao.save(event);}
 
     public Event getEventById(Integer id) {
@@ -31,7 +26,6 @@ public class EventService {
     }
 
     public List<Event> getEventsByCategory(int cid) {
-        Category c = categoryDao.findById(cid).get();
-        return eventDao.findByCategory(c);
+        return eventDao.findByCategoryId(cid);
     }
 }

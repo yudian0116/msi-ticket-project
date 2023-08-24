@@ -2,6 +2,8 @@ package com.mercury.eventsercive.service;
 
 import com.mercury.eventsercive.bean.Ticket;
 import com.mercury.eventsercive.dao.TicketDao;
+
+import dto.TicketResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,17 @@ public class TicketService {
         } else {
             return null;
         }
+    }
+
+    public List<TicketResponse> getTicketsFromList(List<Integer> ticketId) {
+        return ticketDao.findTicketByIdIn(ticketId).stream()
+                .map(ticket ->
+                    TicketResponse.builder()
+                            .tid(ticket.getId())
+                            .price(ticket.getPrice())
+                            .isAvailable(ticket.getStock() > 0)
+                            .build()
+                ).toList();
     }
 
     public List<Ticket> getTicketsByEvent(int event_id) {

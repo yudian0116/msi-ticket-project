@@ -2,11 +2,9 @@ package com.mercury.ordersercive.controller;
 
 import com.mercury.ordersercive.bean.Order;
 import com.mercury.ordersercive.service.OrderService;
+import http.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,4 +20,7 @@ public class OrderController {
 
     @GetMapping("/user/{uid}")
     public List<Order> getByUserId(@PathVariable int uid) {return orderService.getOrderByUserId(uid);}
+
+    @PostMapping
+    public Response save(@RequestBody Order order) {return orderService.save(order);}
 }

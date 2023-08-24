@@ -1,6 +1,7 @@
-package com.mercury.usersercive.http;
+package http;
 
 public class Response {
+
     private boolean success;
     private int code;
     private String message;
@@ -58,4 +59,5 @@ public class Response {
     public String toString() {
         return "Response [success=" + success + ", code=" + code + ", message=" + message + "]";
     }
+
 }

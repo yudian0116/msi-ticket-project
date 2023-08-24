@@ -1,7 +1,9 @@
 package com.mercury.eventsercive.controller;
 
 import com.mercury.eventsercive.bean.Ticket;
+
 import com.mercury.eventsercive.service.TicketService;
+import dto.TicketResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +18,9 @@ public class TicketController {
 
     @GetMapping("/{id}")
     public Ticket getTicketById(@PathVariable int id) {return ticketService.getTicketById(id);}
+
+    @GetMapping("/list")
+    public List<TicketResponse> getTicketsFromList(@RequestParam List<Integer> ticketId) {return ticketService.getTicketsFromList(ticketId);}
 
     @GetMapping("/event/{eid}")
     public List<Ticket> getTicketsByEvent(@PathVariable int eid) {return ticketService.getTicketsByEvent(eid);}

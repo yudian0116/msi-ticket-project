@@ -18,7 +18,7 @@ public class CartItem {
     @Getter
     private int id;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     private Cart cart;
 
     @Column

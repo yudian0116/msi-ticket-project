@@ -3,7 +3,7 @@ package com.mercury.usersercive.service;
 import com.mercury.usersercive.bean.Role;
 import com.mercury.usersercive.bean.User;
 import com.mercury.usersercive.dao.UserDao;
-import com.mercury.usersercive.http.Response;
+import http.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
