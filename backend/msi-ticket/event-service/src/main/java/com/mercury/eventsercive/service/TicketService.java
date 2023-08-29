@@ -33,7 +33,7 @@ public class TicketService {
                     TicketResponse.builder()
                             .tid(ticket.getId())
                             .price(ticket.getPrice())
-                            .isAvailable(ticket.getStock() > 0)
+                            .stock(ticket.getStock())
                             .build()
                 ).toList();
     }

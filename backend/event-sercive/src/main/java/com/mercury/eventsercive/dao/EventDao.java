@@ -9,5 +9,5 @@ import java.util.List;
 public interface EventDao extends JpaRepository<Event, Integer> {
     public Event findByName(String name);
 
-    public List<Event> findByCategory(Category category);
+    public List<Event> findByCategoryId(Integer cid);
 }

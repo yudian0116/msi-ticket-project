@@ -27,6 +27,10 @@ public class OrderItem {
 
     @Column
     @Getter
+    private int price;
+
+    @Column
+    @Getter
     private int quantity;
 
     @Column

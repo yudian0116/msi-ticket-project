@@ -2,7 +2,7 @@ create type status as enum ('open', 'paid', 'completed', 'canceled');
 
 create table orders (
 	id int primary key,
-	user_id int not null,
+	user_id int,
 	total numeric(10, 2),
 	date_time timestamp with time zone,
 	status status
@@ -40,8 +40,9 @@ insert into orders (id, user_id, total, date_time, status) values (1, 2, 100.00,
 
 create table order_item (
 	id int primary key,
-	order_id int not null,
-	ticket_id int not null,
+	order_id int,
+	ticket_id int,
+	price numeric(10, 2),
 	quantity int,
 	subtotal numeric(10, 2)
 );
@@ -72,8 +73,8 @@ $BODY$;
 ALTER FUNCTION public.order_item_ID()
     OWNER TO postgres;
 
-insert into order_item (id, order_id, ticket_id, quantity, subtotal) values (1, 1, 1, 1, 50.00);
-insert into order_item (id, order_id, ticket_id, quantity, subtotal) values (2, 1, 2, 2, 50.00);
+insert into order_item (id, order_id, ticket_id, price, quantity, subtotal) values (1, 1, 1, 50.00, 1, 50.00);
+insert into order_item (id, order_id, ticket_id, price, quantity, subtotal) values (2, 1, 2, 25.00, 2, 50.00);
 
 --------------------------------------------------------------------
 
@@ -81,10 +82,10 @@ create type edit_status as enum ('open', 'approved', 'denied', 'canceled');
 
 create table edit_order_request (
 	id int primary key,
-	user_id int not null,
-	order_id int not null,
-	old_order_item_id int not null,
-	new_order_item_id int not null,
+	user_id int,
+	order_id int,
+	old_order_item_id int,
+	new_order_item_id int,
 	status edit_status
 );
 

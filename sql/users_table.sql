@@ -1,7 +1,8 @@
 create table users (
 	id int primary key,
-	email varchar(100) not null,
-	password varchar(255) not null,
+	email varchar(100),
+	password varchar(255),
+	name varchar(50),
 	role int,
 	active boolean default true
 );
@@ -32,15 +33,15 @@ $BODY$;
 ALTER FUNCTION public.USER_ID()
     OWNER TO postgres;
 
-insert into users (id, email, password, role) values (1, 'admin@ticket.com', '$2a$11$aL.ou06hFDE1p23WLTf6..yeq879FxCWZEE8ATEzkU/lw/Utaut2m', 1);
-insert into users (id, email, password, role) values (2, 'customer@ticket.com', '$2a$11$D031sn4yBKa8m3KmUc.fGuvjCwwyadyrVgfU3SH23McMenLj9chF.', 2);
+insert into users (id, email, password, name, role) values (1, 'admin@ticket.com', '$2a$11$aL.ou06hFDE1p23WLTf6..yeq879FxCWZEE8ATEzkU/lw/Utaut2m', 'admin', 1);
+insert into users (id, email, password, name, role) values (2, 'customer@ticket.com', '$2a$11$D031sn4yBKa8m3KmUc.fGuvjCwwyadyrVgfU3SH23McMenLj9chF.', 'customer', 2);
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 create table tokens (
 	id int primary key,
-	user_id int not null,
-	user_token varchar(255) not null,
+	user_id int,
+	user_token varchar(255),
 	create_at timestamp with time zone,
 	expire_at timestamp with time zone
 );

@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 public class TicketResponse {
     private int tid;
     private double price;
-    private boolean isAvailable;
+    private int stock;
 }

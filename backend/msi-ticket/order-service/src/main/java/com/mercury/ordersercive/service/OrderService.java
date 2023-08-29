@@ -50,6 +50,7 @@ public class OrderService {
                     .bodyToMono(TicketResponse[].class)
                     .block();
 
+            // TODO: change to check if stock - quantity >= 0
             boolean allTicketsAvail = Arrays.stream(ticketResponseArray).allMatch(TicketResponse::isAvailable);
 
             // TODO: map subtotal to each orderItem
@@ -58,6 +59,8 @@ public class OrderService {
                 purchases.forEach((orderItem) -> {
                     orderItem.setTicket_id(orderItem.getTicket_id());
                     orderItem.setQuantity(orderItem.getQuantity());
+                    orderItem.setPrice(orderItem.getPrice());
+                    orderItem.setSubtotal(orderItem.getSubtotal());
                     orderItem.setOrder(order);
                 });
                 orderDao.save(order);
@@ -65,7 +68,7 @@ public class OrderService {
                 throw new IllegalArgumentException("Ticket not available!");
             }
 
-            double total = Arrays.stream(ticketResponseArray).mapToDouble(TicketResponse::getPrice).sum();
+            double total = purchases.stream().mapToDouble(OrderItem::getSubtotal).sum();
 
             order.setTotal(total);
             order.setDate_time(ZonedDateTime.now());

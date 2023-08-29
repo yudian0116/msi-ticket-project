@@ -1,6 +1,6 @@
 create table cart (
 	id int primary key,
-	user_id int not null,
+	user_id int,
 	total numeric(10, 2)
 );
 
@@ -36,7 +36,7 @@ insert into cart (id, user_id, total) values (1, 2, 25.00);
 
 create table cart_item (
 	id int primary key,
-	cart_id int not null,
+	cart_id int,
 	ticket_id int,
 	quantity int,
 	subtotal numeric(10, 2)

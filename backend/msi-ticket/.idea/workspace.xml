@@ -5,50 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5fecca4a-1e3f-4f6d-a080-2b13a867925b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/83f7ee1b-bedc-426e-a7a5-7795c667b3c5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/83f7ee1b-bedc-426e-a7a5-7795c667b3c5/storage_v2/_src_/database/orders.5WLfww.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/83f7ee1b-bedc-426e-a7a5-7795c667b3c5/storage_v2/_src_/database/orders.5WLfww/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/83f7ee1b-bedc-426e-a7a5-7795c667b3c5/storage_v2/_src_/database/orders.5WLfww/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/83f7ee1b-bedc-426e-a7a5-7795c667b3c5/storage_v2/_src_/database/orders.5WLfww/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/83f7ee1b-bedc-426e-a7a5-7795c667b3c5/storage_v2/_src_/database/orders.5WLfww/schema/public.abK9xQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-server/src/main/java/com/mercury/discoveryserver/DiscoveryServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/config/WebClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shared/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shared/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shared/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shared/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shared/src/main/java/dto/TicketResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shared/src/main/java/http/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cart-service/src/main/java/com/mercury/cartservice/config/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../discovery-server/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../discovery-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../discovery-server/src/main/java/com/mercury/discoveryserver/DiscoveryServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../discovery-server/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/config/WebClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cart-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cart-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cart-service/src/main/java/com/mercury/cartservice/bean/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cart-service/src/main/java/com/mercury/cartservice/bean/CartItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cart-service/src/main/java/com/mercury/cartservice/http/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cart-service/src/main/java/com/mercury/cartservice/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cart-service/src/main/java/com/mercury/cartservice/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cart-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../cart-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../event-sercive/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../event-sercive/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/controller/TicketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/dao/CategoryDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/dao/EventDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/dao/EventDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/dao/TicketDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/dao/TicketDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/http/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/service/EventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/service/EventService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../event-sercive/src/main/java/com/mercury/eventsercive/service/TicketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../event-sercive/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../event-sercive/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/83f7ee1b-bedc-426e-a7a5-7795c667b3c5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/83f7ee1b-bedc-426e-a7a5-7795c667b3c5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/src/main/java/com/mercury/cartservice/http/Response.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/event-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/controller/TicketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/dao/CategoryDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/dao/EventDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/dao/EventDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/dao/TicketDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/dao/TicketDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/http/Response.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/service/EventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/service/EventService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-service/src/main/java/com/mercury/eventsercive/service/TicketService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/event-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/event-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/http/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/bean/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/bean/OrderItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mercury/ordersercive/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/http/Response.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/mercury/usersercive/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-sercive/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../order-sercive/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/bean/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/bean/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/http/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-sercive/src/main/java/com/mercury/ordersercive/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-sercive/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../order-sercive/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shared/src/main/java/dto/TicketResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shared/src/main/java/dto/TicketResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-sercive/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-sercive/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-sercive/src/main/java/com/mercury/usersercive/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-sercive/src/main/java/com/mercury/usersercive/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-sercive/src/main/java/com/mercury/usersercive/http/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-sercive/src/main/java/com/mercury/usersercive/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-sercive/src/main/java/com/mercury/usersercive/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-sercive/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../user-sercive/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sql/carts_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../sql/carts_table.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../sql/events_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../sql/events_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sql/orders_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../sql/orders_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sql/users_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../sql/users_table.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +64,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -76,35 +78,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "jbr-17",
-    "last_opened_file_path": "/Users/yudianli/Documents/GitHub/msi-ticket-project/backend/msi-ticket",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "spring.configuration.checksum": "a0578c452681aa7faf4327f37d9c48b8",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;jbr-17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yudianli/Documents/GitHub/msi-ticket-project/backend/msi-ticket&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e75696b8a403353f453b74490c6acb00&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -188,7 +190,10 @@
       <option name="presentableId" value="Default" />
       <updated>1692746672531</updated>
       <workItem from="1692746673822" duration="2781000" />
-      <workItem from="1692802344834" duration="8894000" />
+      <workItem from="1692802344834" duration="13791000" />
+      <workItem from="1693234925800" duration="5205000" />
+      <workItem from="1693348902322" duration="22000" />
+      <workItem from="1693349031549" duration="165000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,7 @@
  create table venue (
 	id int primary key,
-	name varchar(100) not null,
-	address varchar(200) not null,
+	name varchar(100),
+	address varchar(200),
 	owner varchar(50),
 	phone varchar(20),
 	capacity int,
@@ -40,10 +40,10 @@ insert into venue (id, name, address, capacity) values (1, 'moonlight bar', '123
 
 create table event (
 	id int primary key,
-	name varchar(100) not null,
+	name varchar(100),
 	start_time timestamp with time zone,
 	end_time timestamp with time zone,
-	venue_id int not null,
+	venue_id int,
 	category_id int,
 	image varchar(255),
 	description varchar(1000)
@@ -81,7 +81,7 @@ insert into event (id, name, venue_id, category_id, start_time, end_time) values
 
 create table category (
 	id int primary key,
-	name varchar(50) not null
+	name varchar(50)
 );
 
 create sequence public.category_seq
@@ -117,7 +117,7 @@ insert into category (id, name) values (2, 'open class');
 
 create table ticket (
 	id int primary key,
-	event_id int not null,
+	event_id int,
 	price numeric(10, 2),
 	stock int,
 	type varchar(50)
@@ -147,7 +147,7 @@ AS $BODY$
 $BODY$;
 
 ALTER FUNCTION public.ticket_ID()
-    OWNER TO postgres
+    OWNER TO postgres;
 
 insert into ticket (id, event_id, price, stock, type) values (1, 1, 50.00, 10, 'VIP');
 insert into ticket (id, event_id, price, stock, type) values (2, 1, 25.00, 30, 'Common');
