@@ -21,4 +21,10 @@ public class VenueController {
     @PostMapping
     public void save(@RequestBody Venue venue) {venueService.save(venue);}
 
+    @PutMapping
+    public void update(@RequestBody Venue venue) {venueService.update(venue);}
+
+    @DeleteMapping("/{id}")
+    public void deleteById(@PathVariable int id) {venueService.deleteById(id);}
+
 }

@@ -27,4 +27,10 @@ public class TicketController {
 
     @PostMapping
     public void save(@RequestBody Ticket ticket) {ticketService.save(ticket);}
+
+    @PutMapping
+    public void update(@RequestBody Ticket ticket) {ticketService.update(ticket);}
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable int id) {ticketService.deleteById(id);}
 }

@@ -2,9 +2,9 @@ package com.mercury.ordersercive.service;
 
 import com.mercury.ordersercive.bean.Order;
 import com.mercury.ordersercive.bean.OrderItem;
-import com.mercury.ordersercive.dao.EditOrderRequestDao;
 import com.mercury.ordersercive.dao.OrderDao;
 import com.mercury.ordersercive.dao.OrderItemDao;
+import dto.InventoryResponse;
 import dto.TicketResponse;
 import http.Response;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,9 +28,6 @@ public class OrderService {
     private OrderItemDao orderItemDao;
 
     @Autowired
-    private EditOrderRequestDao editOrderRequestDao;
-
-    @Autowired
     private WebClient.Builder webClientBuilder;
 
     public Order getOrderById(Integer id) {
@@ -43,6 +40,21 @@ public class OrderService {
             List<OrderItem> purchases = order.getPurchases();
             List<Integer> ticketIds = purchases.stream().map(OrderItem::getTicket_id).toList();
 
+            InventoryResponse[] inventoryResponseArray = webClientBuilder.build().get()
+                    .uri("http://inventory-service/inventories/list",
+                            uriBuilder -> uriBuilder.queryParam("ids", ticketIds).build())
+                    .retrieve()
+                    .bodyToMono(InventoryResponse[].class)
+                    .block();
+
+            for (int i = 0; i < inventoryResponseArray.length; i++) {
+                if (inventoryResponseArray[i].getQuantity() - purchases.get(i).getQuantity() < 0) {
+                    throw new IllegalArgumentException("Ticket not available!");
+                } else {
+                    inventoryResponseArray[i].setQuantity(inventoryResponseArray[i].getQuantity() - purchases.get(i).getQuantity());
+                }
+            }
+
             TicketResponse[] ticketResponseArray = webClientBuilder.build().get()
                     .uri("http://event-service/tickets/list",
                             uriBuilder -> uriBuilder.queryParam("ticketId", ticketIds).build())
@@ -50,32 +62,28 @@ public class OrderService {
                     .bodyToMono(TicketResponse[].class)
                     .block();
 
-            // TODO: change to check if stock - quantity >= 0
-            // boolean allTicketsAvail = Arrays.stream(ticketResponseArray).allMatch(TicketResponse::isAvailable);
-
-            // TODO: map subtotal to each orderItem
-
-            if(true) {
-                purchases.forEach((orderItem) -> {
-                    orderItem.setTicket_id(orderItem.getTicket_id());
-                    orderItem.setQuantity(orderItem.getQuantity());
-                    orderItem.setPrice(orderItem.getPrice());
-                    orderItem.setSubtotal(orderItem.getSubtotal());
-                    orderItem.setOrder(order);
-                });
-                orderDao.save(order);
-            } else {
-                throw new IllegalArgumentException("Ticket not available!");
+            for (int i = 0; i < ticketResponseArray.length; i++) {
+                purchases.get(i).setPrice(ticketResponseArray[i].getPrice());
             }
 
-            double total = purchases.stream().mapToDouble(OrderItem::getSubtotal).sum();
+            purchases.forEach((orderItem) -> {
+                orderItem.setSubtotal(orderItem.getPrice() * orderItem.getQuantity());
+                orderItem.setOrder(order);
+            });
 
-            order.setTotal(total);
+            order.setTotal(purchases.stream().mapToDouble(OrderItem::getSubtotal).sum());
             order.setDate_time(ZonedDateTime.now());
             order.setStatus("open");
+            orderDao.save(order);
+
+            webClientBuilder.build().put()
+                    .uri("http://inventory-service/inventories/multi")
+                    .bodyValue(Arrays.asList(inventoryResponseArray))
+                    .retrieve().bodyToMono(Response.class).block();
+
             return new Response(true);
         } catch (Exception e) {
-            return new Response(false);
+            return new Response(false, e.getMessage());
         }
     }
 
@@ -83,5 +91,17 @@ public class OrderService {
 
     public List<Order> getOrderByUserId(int uid) {
         return orderDao.findByUserId(uid);
+    }
+
+    public void payOrder(int id) {
+        Order order = orderDao.findById(id).get();
+        order.setStatus("paid");
+        orderDao.save(order);
+    }
+
+    public void completeOrder(int id) {
+        Order order = orderDao.findById(id).get();
+        order.setStatus("complete");
+        orderDao.save(order);
     }
 }

@@ -6,7 +6,7 @@ create table cart (
 
 create sequence public.cart_seq
 	increment 1
-	start 1
+	start 5
 	minvalue 1
 	maxvalue 9223372036854775807
 	cache 1;
@@ -38,13 +38,14 @@ create table cart_item (
 	id int primary key,
 	cart_id int,
 	ticket_id int,
+	price numeric(10, 2),
 	quantity int,
 	subtotal numeric(10, 2)
 );
 
 create sequence public.cart_item_seq
-	increment 1
-	start 1
+	increment 15
+	start 5
 	minvalue 1
 	maxvalue 9223372036854775807
 	cache 1;
@@ -68,4 +69,4 @@ $BODY$;
 ALTER FUNCTION public.cart_item_ID()
     OWNER TO postgres;
 
-insert into cart_item (id, cart_id, ticket_id, quantity, subtotal) values (1, 1, 2, 1, 25.00);
+insert into cart_item (id, cart_id, ticket_id, price, quantity, subtotal) values (1, 1, 2, 25.00, 1, 25.00);

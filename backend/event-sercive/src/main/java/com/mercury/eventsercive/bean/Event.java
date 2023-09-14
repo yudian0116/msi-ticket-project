@@ -24,13 +24,13 @@ public class Event {
     @Getter
     private String name;
 
-    @Column
+    @Column(name = "start_time")
     @Getter
-    private ZonedDateTime start_time;
+    private ZonedDateTime startTime;
 
-    @Column
+    @Column(name = "end_time")
     @Getter
-    private ZonedDateTime end_time;
+    private ZonedDateTime endTime;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
     private Venue venue;

@@ -1,16 +1,14 @@
-create type status as enum ('open', 'paid', 'completed', 'canceled');
-
 create table orders (
 	id int primary key,
 	user_id int,
 	total numeric(10, 2),
 	date_time timestamp with time zone,
-	status status
+	status VARCHAR(10)
 );
 
 create sequence public.order_seq
 	increment 1
-	start 1
+	start 5
 	minvalue 1
 	maxvalue 9223372036854775807
 	cache 1;
@@ -48,8 +46,8 @@ create table order_item (
 );
 
 create sequence public.order_item_seq
-	increment 1
-	start 1
+	increment 15
+	start 5
 	minvalue 1
 	maxvalue 9223372036854775807
 	cache 1;

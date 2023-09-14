@@ -13,7 +13,7 @@ import lombok.*;
 public class OrderItem {
 
     @Id
-    @SequenceGenerator(name = "order_item_seq_gen", sequenceName = "order_item_seq", allocationSize = 1)
+    @SequenceGenerator(name = "order_item_seq_gen", sequenceName = "order_item_seq", allocationSize = 15)
     @GeneratedValue(generator="order_item_seq_gen", strategy = GenerationType.AUTO)
     @Getter
     private int id;
@@ -27,7 +27,7 @@ public class OrderItem {
 
     @Column
     @Getter
-    private int price;
+    private double price;
 
     @Column
     @Getter

@@ -24,8 +24,5 @@ public class Ticket {
     private double price;
 
     @Column
-    private int stock;
-
-    @Column
     private String type;
 }

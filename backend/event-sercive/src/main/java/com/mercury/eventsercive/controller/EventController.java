@@ -22,4 +22,10 @@ public class EventController {
 
     @PostMapping
     public void save(@RequestBody Event event) {eventService.save(event);}
+
+    @PutMapping
+    public void update(@RequestBody Event event) {eventService.update(event);}
+
+    @DeleteMapping("/{id}")
+    public void deleteById(@PathVariable int id) {eventService.deleteById(id);}
 }

@@ -24,8 +24,6 @@ public class CartService {
     @Autowired
     private WebClient.Builder webClientBuilder;
 
-    public Cart getCartById(Integer id) {return cartDao.findById(id).get();}
-
     public void deleteCartItem(List<CartItem> purchases) {cartItemDao.deleteAll(purchases);}
 
     public Cart getCartByUserId(int uid) {
@@ -36,7 +34,7 @@ public class CartService {
         try {
             List<CartItem> purchases = cart.getToBePurchased();
 
-            List<Integer> ticketIds = purchases.stream().map(CartItem::getTicket_id).toList();
+            List<Integer> ticketIds = purchases.stream().map(CartItem::getTicketId).toList();
 
             TicketResponse[] ticketResponseArray = webClientBuilder.build().get()
                     .uri("http://event-service/tickets/list",
@@ -45,17 +43,33 @@ public class CartService {
                     .bodyToMono(TicketResponse[].class)
                     .block();
 
-            // TODO: map subtotal to each cartItem
+            for (int i = 0; i < ticketResponseArray.length; i++) {
+                purchases.get(i).setPrice(ticketResponseArray[i].getPrice());
+            }
 
             purchases.forEach((cartItem) -> {
-                cartItem.setTicket_id(cartItem.getTicket_id());
-                cartItem.setQuantity(cartItem.getQuantity());
+                cartItem.setSubtotal(cartItem.getPrice() * cartItem.getQuantity());
                 cartItem.setCart(cart);
             });
+
+            cart.setTotal(purchases.stream().mapToDouble(CartItem::getSubtotal).sum());
             cartDao.save(cart);
             return new Response(true);
         } catch (Exception e) {
             return new Response(false);
         }
     }
+
+    public void clearCart(int uid) {
+        Cart cart = cartDao.findByUserId(uid);
+        cartItemDao.deleteAll(cart.getToBePurchased());
+        cart.setTotal(0);
+        cartDao.save(cart);
+    }
+
+    // TODO: send request to order service to save order, then clear cart
+    public void checkOut(int uid) {
+
+    }
+
 }

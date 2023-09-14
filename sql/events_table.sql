@@ -119,7 +119,6 @@ create table ticket (
 	id int primary key,
 	event_id int,
 	price numeric(10, 2),
-	stock int,
 	type varchar(50)
 );
 
@@ -149,6 +148,6 @@ $BODY$;
 ALTER FUNCTION public.ticket_ID()
     OWNER TO postgres;
 
-insert into ticket (id, event_id, price, stock, type) values (1, 1, 50.00, 10, 'VIP');
-insert into ticket (id, event_id, price, stock, type) values (2, 1, 25.00, 30, 'Common');
-insert into ticket (id, event_id, price, stock, type) values (3, 1, 0.00, 0, 'Test');
+insert into ticket (id, event_id, price, type) values (1, 1, 50.00, 'VIP');
+insert into ticket (id, event_id, price, type) values (2, 1, 25.00, 'Common');
+insert into ticket (id, event_id, price, type) values (3, 1, 0.00, 'Test');

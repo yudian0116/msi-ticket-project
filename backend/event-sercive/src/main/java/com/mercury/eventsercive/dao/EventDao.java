@@ -1,6 +1,5 @@
 package com.mercury.eventsercive.dao;
 
-import com.mercury.eventsercive.bean.Category;
 import com.mercury.eventsercive.bean.Event;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -10,4 +9,6 @@ public interface EventDao extends JpaRepository<Event, Integer> {
     public Event findByName(String name);
 
     public List<Event> findByCategoryId(Integer cid);
+
+    public List<Event> findByVenueId(Integer vid);
 }

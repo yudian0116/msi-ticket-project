@@ -13,7 +13,7 @@ import lombok.*;
 public class CartItem {
 
     @Id
-    @SequenceGenerator(name = "cart_item_seq_gen", sequenceName = "cart_item_seq", allocationSize = 1)
+    @SequenceGenerator(name = "cart_item_seq_gen", sequenceName = "cart_item_seq", allocationSize = 15)
     @GeneratedValue(generator="cart_item_seq_gen", strategy = GenerationType.AUTO)
     @Getter
     private int id;
@@ -21,9 +21,13 @@ public class CartItem {
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     private Cart cart;
 
+    @Column(name = "ticket_id")
+    @Getter
+    private int ticketId;
+
     @Column
     @Getter
-    private int ticket_id;
+    private double price;
 
     @Column
     @Getter
