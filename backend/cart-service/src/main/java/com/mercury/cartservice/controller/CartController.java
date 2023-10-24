@@ -20,6 +20,12 @@ public class CartController {
     @PostMapping
     public void save(@RequestBody Cart cart) {cartService.save(cart);}
 
+    @PostMapping("/{uid}")
+    public void addCartItem(@PathVariable int uid, @RequestBody CartItem cartItem) {cartService.addCartItem(uid, cartItem);}
+
     @DeleteMapping
     public void delete(@RequestParam List<CartItem> items) {cartService.deleteCartItem(items);}
+
+    @GetMapping("/checkout/{uid}")
+    public void checkout(@PathVariable int uid) {cartService.checkout(uid);}
 }

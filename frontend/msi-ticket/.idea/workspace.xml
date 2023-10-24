@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6b46bb62-3ef6-4111-b7fa-84caaf1cbbce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../backend/shared/src/main/java/dto/CheckoutItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../backend/shared/src/main/java/dto/CheckoutRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/msi-ticket.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Events/EventDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Events/TicketList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cart/shoppingCart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/events/EventsCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/header/TopBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/login/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/login/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/MainPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/UpcomingEvents.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/events.reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/root.reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/ticekts.reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/venues.reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/Background.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/user-center/AddEvent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/user-center/AddTicket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/user-center/AddVenue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/user-center/ChangePW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/user-center/manageOrder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/user-center/manageUser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/user-center/userMain.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/user-center/userSIder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/venues/VenuesCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/cart-service/src/main/java/com/mercury/cartservice/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/cart-service/src/main/java/com/mercury/cartservice/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/cart-service/src/main/java/com/mercury/cartservice/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/cart-service/src/main/java/com/mercury/cartservice/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/order-sercive/src/main/java/com/mercury/ordersercive/bean/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/order-sercive/src/main/java/com/mercury/ordersercive/bean/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/order-sercive/src/main/java/com/mercury/ordersercive/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/order-sercive/src/main/java/com/mercury/ordersercive/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../backend/order-sercive/src/main/java/com/mercury/ordersercive/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/order-sercive/src/main/java/com/mercury/ordersercive/service/OrderService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2WBnlvvf3B3vE8IthClDCmhKMCx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yudianli/Documents/GitHub/msi-ticket-project/frontend/msi-ticket/src/user-center&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/user-center" />
+      <recent name="$PROJECT_DIR$/src/main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/shared" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6b46bb62-3ef6-4111-b7fa-84caaf1cbbce" name="Changes" comment="" />
+      <created>1696214994402</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696214994402</updated>
+      <workItem from="1696214995887" duration="24645000" />
+      <workItem from="1697122028720" duration="9866000" />
+      <workItem from="1697467977053" duration="9647000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

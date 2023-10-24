@@ -21,9 +21,9 @@ public class OrderItem {
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     private Order order;
 
-    @Column
+    @Column(name = "ticket_id")
     @Getter
-    private int ticket_id;
+    private int ticketId;
 
     @Column
     @Getter

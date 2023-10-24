@@ -3,6 +3,7 @@ package com.mercury.ordersercive.controller;
 import com.mercury.ordersercive.bean.Order;
 import com.mercury.ordersercive.bean.OrderItem;
 import com.mercury.ordersercive.service.OrderService;
+import dto.CheckoutRequest;
 import http.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +25,9 @@ public class OrderController {
 
     @PostMapping
     public Response save(@RequestBody Order order) {return orderService.save(order);}
+
+    @PostMapping("/checkout")
+    public Response checkout(@RequestBody CheckoutRequest checkoutRequest) {return orderService.saveFromCart(checkoutRequest);}
 
     @DeleteMapping
     public void delete(@RequestParam List<OrderItem> items) {orderService.deleteOrderItem(items);}
