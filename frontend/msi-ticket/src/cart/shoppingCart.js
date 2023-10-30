@@ -1,106 +1,104 @@
-import {Button, Drawer, FloatButton, List, message, Typography} from "antd";
-import { useEffect, useState } from "react";
-import {checkout, getCart} from "../utils/utils";
+import React from 'react';
+import { connect } from 'react-redux';
+import {Drawer, Button, Divider, FloatButton, List} from 'antd';
 import {ShoppingCartOutlined} from "@ant-design/icons";
+import {clearCart} from "../actions/cart.action";
+import {useNavigate} from "react-router-dom";
+import {appConstants} from "../shared/constants";
 
+const ShoppingCart = ({ cartItems, isCartVisible, toggleCartVisibility, clearCart }) => {
 
-const { Text } = Typography;
+    const navigate = useNavigate();
 
-const ShoppingCart = () => {
-    const [cartVisible, setCartVisible] = useState(false);
-    const [cartData, setCartData] = useState();
-    const [loading, setLoading] = useState(false);
-    const [checking, setChecking] = useState(false);
+    const handleCheckout = () => {
 
-    useEffect(() => {
-        if (!cartVisible) {
-            return;
-        }
-
-        setLoading(true);
-        getCart()
-            .then((data) => {
-                setCartData(data);
-            })
-            .catch((err) => {
-                message.error(err.message);
-            })
-            .finally(() => {
-                setLoading(false);
-            });
-    }, [cartVisible]);
-
-    const onCheckOut = () => {
-        setChecking(true);
-        checkout()
-            .then(() => {
-                message.success("Successfully checkout");
-                setCartVisible(false);
-            })
-            .catch((err) => {
-                message.error(err.message);
-            })
-            .finally(() => {
-                setChecking(false);
-            });
+        // Redirect to the checkout page
+        navigate(appConstants.checkoutRoute);
     };
 
-    const onCloseDrawer = () => {
-        setCartVisible(false);
-    };
+        // Calculate the total price of all items in the cart
+        const totalCartPrice = cartItems.reduce((total, cartItem) => {
+            const itemPrice = cartItem.tickets.reduce(
+                (itemTotal, ticket) => itemTotal + ticket.price * ticket.quantity,
+                0
+            );
+            return total + itemPrice;
+        }, 0);
 
-    const onOpenDrawer = () => {
-        setCartVisible(true);
-    };
-
-    return (
+        return (
         <>
-            <FloatButton type="primary" onClick={onOpenDrawer} icon= {<ShoppingCartOutlined />} />
+            <FloatButton type="primary" onClick={toggleCartVisibility} icon={<ShoppingCartOutlined />} />
             <Drawer
-                title="My Shopping Cart"
-                onClose={onCloseDrawer}
-                visible={cartVisible}
-                width={520}
-                footer={
-                    <div
-                        style={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                        }}
-                    >
-                        <Text strong={true}>{`Total price: $${cartData?.totalPrice}`}</Text>
-                        <div>
-                            <Button onClick={onCloseDrawer} style={{ marginRight: 8 }}>
-                                Cancel
-                            </Button>
-                            <Button
-                                onClick={onCheckOut}
-                                type="primary"
-                                loading={checking}
-                                disabled={loading || cartData?.orderItemList.length === 0}
-                            >
+                title="Shopping Cart"
+                placement="right"
+                width={300}
+                onClose={toggleCartVisibility}
+                open={isCartVisible}
+                style={{ height: '100%' }}
+            >
+                <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                    <div style={{ flex: 1, overflowY: 'auto' }}>
+                        {cartItems.map((cartItem) => (
+                            <div key={cartItem.event.id}>
+                                <h3>{cartItem.event.name}</h3>
+                                <List
+                                    itemLayout="horizontal"
+                                    size="large"
+                                    dataSource={cartItem.tickets}
+                                    renderItem={(ticket) => (
+                                        <List.Item key={ticket.id}>
+                                            <List.Item.Meta
+                                                title={ticket.type}
+                                                description={`Price: $${ticket.price}, Quantity: ${ticket.quantity}`}
+                                            />
+                                        </List.Item>
+                                    )}
+                                />
+                            </div>
+                        ))}
+                    </div>
+
+                    <div style={{ flex: 'none', position: 'fixed', bottom: '0', width: '100%' }}>
+                        <Divider />
+                        <div style={{ textAlign: 'left', marginBottom: '8px' }}>
+                            Total Price: $ {totalCartPrice.toFixed(2)}
+                        </div>
+                        <div style={{ paddingBottom: "8px", marginTop: "8px" }}>
+                            {cartItems.length > 0 ? (
+                                <>
+                            <Button type="primary" onClick={handleCheckout} style={{ marginRight: "8px", marginTop:"8px"}}>
                                 Checkout
                             </Button>
+                            <Button type="default" onClick={clearCart}>
+                                Clear
+                            </Button>
+                                </>
+                                ) : (
+                                    <>
+                                    <Button type="primary" disabled style={{ marginRight: "8px", marginTop:"8px"}}>
+                                    Checkout</Button>
+                                        <Button type="default" onClick={clearCart}>
+                                            Clear
+                                        </Button>
+                                    </>)
+                        }
                         </div>
+
                     </div>
-                }
-            >
-                <List
-                    loading={loading}
-                    itemLayout="horizontal"
-                    dataSource={cartData?.orderItemList}
-                    renderItem={(item) => (
-                        <List.Item>
-                            <List.Item.Meta
-                                title={item.menuItem.name}
-                                description={`$${item.price}`}
-                            />
-                        </List.Item>
-                    )}
-                />
+                </div>
             </Drawer>
         </>
     );
 };
 
-export default ShoppingCart;
+const mapStateToProps = (state) => ({
+    cartItems: state.cart.items,
+    isCartVisible: state.cart.isCartVisible,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    toggleCartVisibility: () => dispatch({ type: 'TOGGLE_CART_VISIBILITY' }),
+    clearCart: () => dispatch(clearCart()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCart);

@@ -12,7 +12,9 @@ export const appConstants = {
     registerRoute: '/register',
     manageOrder: '/user-center/manageOrder',
     manageUser: '/user-center/manageUser',
+    checkoutRoute: '/checkout',
 
     // actions
     SET_SELECTED_EVENT: 'SET_SELECTED_EVENT',
+
 }

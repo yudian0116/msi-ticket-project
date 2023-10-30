@@ -1,5 +1,6 @@
 package com.mercury.eventsercive.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,6 +19,7 @@ public class Ticket {
     private int id;
 
     @ManyToOne
+    @JsonIgnore
     private Event event;
 
     @Column

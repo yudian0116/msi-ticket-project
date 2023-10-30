@@ -22,6 +22,7 @@ import ManageUser from "./user-center/manageUser";
 import {rootReducer} from "./reducers/root.reducer";
 import {Provider} from "react-redux";
 import {createStore} from "redux";
+import Checkout from "./cart/Checkout";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -35,6 +36,7 @@ root.render(
                   <Route path={appConstants.eventRoute} element={<Events />} />
                   <Route path={appConstants.venueRoute} element={<Venues />} />
                   <Route path={`${appConstants.eventDetailRoute}/:id`} element={<EventDetail />} />
+                  <Route path={appConstants.checkoutRoute} element={<Checkout />} />
                   <Route path={appConstants.userMainRoute} element={<UserMain />}>
                   <Route path={appConstants.changePW} element={<ChangePW />} />
                   <Route path={appConstants.addEventForm} element={<AddEvent />} />
